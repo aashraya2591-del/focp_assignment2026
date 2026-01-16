@@ -33,8 +33,8 @@ Example:
 
 cd path/to/Task1
 
-5.	Run the program:
-6.	
+	Run the program:
+
 Python pizza_calculator.py
 
 Required Inputs:
@@ -63,7 +63,7 @@ Output
 1.	Order Total: Final price after removing the cheapest pizza
    
 2.	Total Discount %: How much Discount was given.
-3.	
+   
 Example:
 
 Order Total is £36.00, a fabulous discount of 25%
