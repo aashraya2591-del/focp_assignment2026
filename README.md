@@ -1,7 +1,7 @@
 REPOSITORY OVERVIEW
 
 This repository contains 60% of the FOCP (Fundamental of computer programming) Final assignment, as required by our university. 
-All files included in this repository strictly follows the guidelines and structure prvovided during the course.
+All files included in this repository strictly follows the guidelines and structure provided during the course.
 The repository contains a total of three (3) files:
 Logbook
 Notebook
