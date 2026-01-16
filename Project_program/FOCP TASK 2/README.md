@@ -1,167 +1,191 @@
-TASK 1
-BECKETT PIZZA PLAZA CALCULATOR
+TASK 2
+
+PASSWORD SECURITY CHECKER
 
 FOLDER STRUCTURE 
 
-Final_focp/
+final_focp/
 
 Project Program/
 
-FOCP TASK/
+FOCP TASK2/
 
-Pizza_calculator.py
+password_checker.py
 
 README.md
 
-Programs Overview
 
-This program calculates the total cost for a pizza order with a special discount offer: Buy 4 pizzas, pay for only 3! The Cheapest pizza is FREE.
 
-Name: Beckett Pizza Plaza 4 for 3 offer Calculator
+Program Overview
 
-Objective: Calculate order total and discount for a 4-pizza order
+This program simulates a security verification system. First of all, it checks if you’re password is long enough or not based on that it commands you to type 3 random characters from your password to prove that you know your password.
 
-Discount system: The cheapest of the 4 pizzas is free
+Name: Password Security Checker
+
+Purpose: Verify user identity by checking random characters from their password.
+
+Security check: Password must be at least 9 characters long, verify 3 random positions
 
 How to Run
 
 1.	Open your terminal or command prompt
-2.	
-3.	Navigate to the Task 1 folder
    
-Example: 
+2.	Navigate to the Task2 folder:
 
-cd path/to/Task1
+Cd path/to/ Task2
+Run the program:
 
-5.	Run the program:
-6.	
-Python pizza_calculator.py
+python password_checker.py
 
-Required Inputs:
+Required Inputs
 
-•	The program will ask you to enter 4 pizzas price one at a time
+Step 1 
 
-Enter a number (12 or 15)
-•	Must be positive number 
+ Enter your password
+ 
+Type a password that is at least 9 characters long
 
-•	If you add an invalid input like negative number then the program will ask you to add the number again.
+Press Enter
 
-Example:
+The password will appear on screen (This is intentional for the assignment)
 
-Enter Price of Pizza #1: 12
+Step 2: Verify Random characters
 
-Enter Price of Pizza #2: 12
+The program will ask for 3 random characters from your password:
 
-Enter Price of Pizza #3: 12
+It will tell you which position (like “position 5”)
 
-Enter Price of Pizza #4: 12
+Type only ONE Letter and press Enter
 
-
-Output 
+Must match exactly (case sensitive)
 
 
-1.	Order Total: Final price after removing the cheapest pizza
+Example :
+
+Enter your password: Camembert
+
+Enter letter at position 4: e
+
+Enter letter at position 5: r
+
+Enter letter at position 3:m
+
+Output
+
+The program can output different messages
+
+Password Too Short 
+
+Enter your password: cheese
+
+Password too short.
+
+Wrong Character
+
+Enter your password: wensleydale
+
+Enter letter at position 11: e
+
+Correct
+
+Enter letter at position 9: a
+
+Correct
+
+Enter letter at position 10: d
+
+Security check failed.
+
+All correct
+
+
+
+
+Enter your password: camembert
+
+Enter letter at position 4: e
+
+Correct
+
+Enter letter at position 8:r
+
+Correct
+
+Enter letter at position 3:m
+
+Correct
+
+Security check passed.
+
+How it works
+
+Step by Step Process
+
+1.	Get Password from user
    
-2.	Total Discount %: How much Discount was given.
-3.	
-Example:
+User types their password 
 
-Order Total is £36.00, a fabulous discount of 25%
-
-Calculation Process:
-
-1.	Adds all 4-pizza process together
+2.	Check length
    
-Example: 12 + 12 + 12 = 48
+If less than 9 characters – Exit with “Password too short.”
 
-2.	Finds the cheapest pizza
+If 9 or more – Continue to verification 
+
+4.	Generate 3 random positions
    
-Example: cheapest = 12
+Program picks 3 random numbers between 1 and password length
+These positions are checked one by one
 
-3.	Subtracts the cheapest from the total
+5.	Verify each character
 
-Example: 48 – 12 = 36
+Ask user for character at that position
 
-5.	Calculates discount Percentage
+If correct – print “Correct” and continue
+
+If wrong – Print “Security check failed.” And exit immediately 
+
+6.	All checks pass
    
-Example: (12/48) x 100 = 25%
+Print “Security check passed.”
 
-Example Scenarios
+Understanding Positions
 
-Scenario 1: All same price
+If your password is “camebert”
 
-Input: 12, 12, 12, 12
+Position: 1 2 3 4 5 6 7 8 9
 
-Output: Order Total is £ 36.00, a fabulous discount of 25%
+  Letter: c a m e m b e r t 
+ 
+	
+So, when asked:
 
-All Pizza have the same cost, so the total amount a customer saves on discount is 25%
+Position 1: c
 
-Scenario 2: One cheapest Pizza 
+Position 2: e
 
-Input: 12, 12, 12, 11
+Position 3: t
 
-Output: Order Total is £36.00, a fabulous discount of 24%
-
-The £11 is free, as it’s the cheapest pizza on order list ultimately Resulting in a discount less than 25%
-
-Scenario 3: All Different Prices.
-
-Input : 14.99, 16.99, 15.99, 11.00
-
-Output: Order total is £ 47.77, a fabulous discount of 19%!
-
-The £ 11 pizza is free, you pay for the three most expensive ones
-
-
-Error Handling
-
-The program handles the following mistakes:
-
-Invalid Input                                   What Happens
-
-0                                                       “Please enter a valid price!”
-
-Negative number like -5               “ Please enter a valid price!”
-
-Text (like pepperoni)                      “ Please enter a valid price!”
-
-The program will keep asking until you enter a valid price.
 
 Key features
 
-•	Validates all user input
+•	Length validation (minimum 9 characters)
 
-•	Handles decimal price (like £14.99)
+•	Random position selection
 
-•	Automatically finds the cheapest pizza
+•	Immediate Failure on wrong answer
 
-•	Calculates discount percentage accurately
+•	Case sensitive character checking 
 
-•	User friendly error messages 
+•	Clear feedback after each check 
 
-Requirements met
+Requirements Met 
 
-•	Accepts 4 Pizza prices
+•	Prompts user to enter password
 
-•	Calculates total after discount
+•	Checks password length (minimum 9 characters)
 
-•	Displays discount percentage
+Exist if password too short
 
-•	Handles invalid input gracefully
+•	Asks for 3 rando characters 
 
-•	Follows the exact output format from assignment 
-
-Program concept and functions used:
-
-get_pizza_price()  - Gets and validates each pizza price 
-
-calculate_order() – Main calculation and display logic 
-
-Lists to store prices
-
-Built in functions: sum (), min ()
-
-Strings formatting for currency display
-
-Invalid validation with try/expect 
 
